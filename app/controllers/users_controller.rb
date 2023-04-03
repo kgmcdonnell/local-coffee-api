@@ -1,4 +1,5 @@
 class UsersController < ApplicationController
+  # User Sign-Up
   def create
     @user = User.new(
       name: params[:name],
@@ -14,6 +15,7 @@ class UsersController < ApplicationController
     end
   end
 
+  # User Delete
   def destroy
     @user = User.find_by(id: params[:id])
     @user.destroy
