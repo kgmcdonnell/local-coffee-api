@@ -9,10 +9,9 @@ POST http://localhost:3000/coffee_shops.json
 Content-Type: application/json
 
 {
-  "name":"Indian River Coffee Co.",
-  "city": "Melbourne",
-  "state":"FL",
-  "address":"2112A Sarno Rd",
-  "number":"(321) 259-8005",
-  "logo":"https://indianrivercoffee.com/wp-content/uploads/2022/06/logoov_trans.png"
+  "name":"test2",
+  "city": "test2",
+  "state":"test2",
+  "address":"test2",
+  "logo":"test2.png"
   }
