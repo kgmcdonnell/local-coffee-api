@@ -3,12 +3,12 @@ class CoffeeShopsController < ApplicationController
 
   def index
     @coffee_shops = CoffeeShop.all
-    render json: @coffee_shops.as_json
+    render template: "coffee_shops/index"
   end
 
   def show
     @coffee_shop = CoffeeShop.find_by(id: params[:id])
-    render json: @coffee_shop.as_json
+    render template: "coffee_shops/show"
   end
 
   def create
@@ -22,7 +22,7 @@ class CoffeeShopsController < ApplicationController
     )
 
     if @coffee_shop.save
-      render json: @coffee_shop.as_json
+      render template: "coffee_shops/show"
     else
       render json: { errors: @coffee_shop.errors.full_messages }, status: :bad_request
     end
