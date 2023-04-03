@@ -19,7 +19,7 @@ Content-Type: application/json
 ### Delete Coffee Shop
 DELETE http://localhost:3000/coffee_shops/5.json
 
-### User Create
+### User Sign-Up
 POST http://localhost:3000/users.json
 Content-Type: application/json
 
@@ -32,3 +32,12 @@ Content-Type: application/json
 
 ### Delete User
 DELETE http://localhost:3000/users/1.json
+
+### Create a Sessions (User Login)
+POST http://localhost:3000/sessions.json
+Content-Type: application/json
+
+{
+  "email": "kathleen@test.com",
+  "password":"password"
+}
