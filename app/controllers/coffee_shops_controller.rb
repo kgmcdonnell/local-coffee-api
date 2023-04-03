@@ -1,4 +1,6 @@
 class CoffeeShopsController < ApplicationController
+  before_action :authenticate_admin, except: [:index, :show]
+
   def index
     @coffee_shops = CoffeeShop.all
     render json: @coffee_shops.as_json

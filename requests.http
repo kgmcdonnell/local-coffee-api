@@ -1,3 +1,5 @@
+@jwt = eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjo3LCJleHAiOjE2ODA2MjAzNDJ9.RoCehf5__FZq3cBJ5Z5E6jd_8SjpGKw6vnFomu-GJXE
+
 ### Coffee Shops Index
 GET http://localhost:3000/coffee_shops.json
 
@@ -6,6 +8,7 @@ GET http://localhost:3000/coffee_shops/3.json
 
 ### Coffee Shops Create
 POST http://localhost:3000/coffee_shops.json
+Authorization: Bearer {{jwt}}
 Content-Type: application/json
 
 {
@@ -17,27 +20,29 @@ Content-Type: application/json
   }
 
 ### Delete Coffee Shop
-DELETE http://localhost:3000/coffee_shops/5.json
+DELETE http://localhost:3000/coffee_shops/7.json
+Authorization: Bearer {{jwt}}
 
 ### User Sign-Up
 POST http://localhost:3000/users.json
 Content-Type: application/json
 
 {
-  "name":"Kathleen McDonnell",
-  "email":"kathleen@test.com",
+  "name":"Bristol",
+  "email":"bristol@test.com",
   "password":"password",
   "password_confirmation":"password"
 }
 
 ### Delete User
-DELETE http://localhost:3000/users/1.json
+DELETE http://localhost:3000/users/4.json
+Authorization: Bearer {{jwt}}
 
 ### Create a Sessions (User Login)
 POST http://localhost:3000/sessions.json
 Content-Type: application/json
 
 {
-  "email": "kathleen@test.com",
+  "email": "bristol@test.com",
   "password":"password"
 }

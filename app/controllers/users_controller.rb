@@ -1,4 +1,5 @@
 class UsersController < ApplicationController
+  before_action :authenticate_user, except: [:create]
   # User Sign-Up
   def create
     @user = User.new(
@@ -15,10 +16,14 @@ class UsersController < ApplicationController
     end
   end
 
-  # User Delete
+  # User Deletes their profile
   def destroy
     @user = User.find_by(id: params[:id])
-    @user.destroy
-    render json: { message: "User deleted!" }, request: 200
+    if @user == current_user
+      @user.destroy
+      render json: { message: "User deleted!" }, request: 200
+    else
+      render json: { errors: "Unauthorized" }, status: 401
+    end
   end
 end
