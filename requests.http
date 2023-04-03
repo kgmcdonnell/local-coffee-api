@@ -15,3 +15,6 @@ Content-Type: application/json
   "address":"test2",
   "logo":"test2.png"
   }
+
+### Delete Coffee Shop
+DELETE http://localhost:3000/coffee_shops/5.json

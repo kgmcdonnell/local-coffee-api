@@ -25,4 +25,10 @@ class CoffeeShopsController < ApplicationController
       render json: { errors: @coffee_shop.errors.full_messages }, status: :bad_request
     end
   end
+
+  def destroy
+    @coffee_shop = CoffeeShop.find_by(id: params[:id])
+    @coffee_shop.destroy
+    render json: { message: "Successfully deleted local coffee shop!" }, status: 200
+  end
 end
