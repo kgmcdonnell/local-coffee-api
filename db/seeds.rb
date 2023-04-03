@@ -1,8 +1,8 @@
 puts "Seeding..."
 coffee_shops = CoffeeShop.create([
-  { name: "Apocalypse Coffee Roasters", city: "Melbourne", state: "FL", address: "454 N Harbor City Blvd", number: "(321) 254-3792" },
-  { name: "Indialantic Coffee", city: "FL", state: "Indialantic", address: "121 5th Ave" },
-  { name: "Anaya Coffee", city: "Melbourne", state: "FL", address: "1414 Highland Ave", number: "(321) 428-3860" },
+  { name: "Apocalypse Coffee Roasters", city: "Melbourne", state: "FL", address: "454 N Harbor City Blvd", number: "(321) 254-3792", logo: "https://cdn.shopify.com/s/files/1/0292/1575/2226/files/new_logo.png?v=1664989052" },
+  { name: "Indialantic Coffee", city: "FL", state: "Indialantic", address: "121 5th Ave", logo: "https://us1-photo.nextdoor.com/business_logo/22/39/2239dfd199512f021425b0ed8680c8ce.jpeg" },
+  { name: "Anaya Coffee", city: "Melbourne", state: "FL", address: "1414 Highland Ave", number: "(321) 428-3860", logo: "https://www.anayacoffee.com/images/AnayaCoffeeVectorLogo.svg" },
 ])
 
 images = Image.create([
