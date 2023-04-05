@@ -18,14 +18,10 @@ while true
     while index < data.length
       name = data["results"][index]["name"]
       address = data["results"][index]["formatted_address"]
-      rating = data["results"][index]["rating"]
-
       puts "----------------------------------------------------------"
+      puts "ID: #{index + 1}"
       puts "Name: #{name}"
       puts "Address: #{address}"
-      if rating > 0
-        puts "Rating: #{rating}"
-      end
       index = index + 1
     end
   elsif user_input.downcase == "n"
@@ -34,5 +30,30 @@ while true
   else
     puts "----------------------------------------------------------"
     puts "Invalid response. Try again."
+  end
+  puts "----------------------------------------------------------"
+  puts " "
+  puts "Would you like to see more details?(Y/N)"
+  user_input = gets.chomp
+  if user_input.downcase == "y"
+    puts "Enter ID: "
+    user_input_id = gets.chomp.to_i
+    id = data["results"][user_input_id - 1]["place_id"]
+    response = HTTP.get("https://maps.googleapis.com/maps/api/place/details/json?&place_id=#{id}&fields=opening_hours,formatted_phone_number,rating&key=#{ENV["GOOGLE_PLACES_API_KEY"]}")
+    details = response.parse(:json)
+    # Opening Hours
+    puts "----------------------------------------------------------"
+    puts " "
+    hours = details["result"]["opening_hours"]["weekday_text"]
+    puts "Opening Hours: "
+    puts hours
+    puts " "
+    # Phone Number:
+    number = details["result"]["formatted_phone_number"]
+    puts "Phone Number: #{number}"
+    puts " "
+    # Rating
+    rating = details["result"]["rating"]
+    puts "Rating: #{rating}"
   end
 end
