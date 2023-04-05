@@ -1,0 +1,38 @@
+require "http"
+
+while true
+  puts "----------------------------------------------------------"
+  puts "Would you like to see all coffee shops in a specific area? (Y/N)"
+  user_input = gets.chomp
+  if user_input.downcase == "y"
+    puts "Enter Latitude:"
+    latitude = gets.chomp
+    puts "Enter Longitude:"
+    longitude = gets.chomp
+
+    # get coffee shops within 1000 meters
+    response = HTTP.get("https://maps.googleapis.com/maps/api/place/textsearch/json?query=coffee+shop&location=#{latitude},#{longitude}&radius=1000&region=us&type=bakery,cafe&key=#{ENV["GOOGLE_PLACES_API_KEY"]}")
+    data = response.parse(:json)
+    index = 0
+
+    while index < data.length
+      name = data["results"][index]["name"]
+      address = data["results"][index]["formatted_address"]
+      rating = data["results"][index]["rating"]
+
+      puts "----------------------------------------------------------"
+      puts "Name: #{name}"
+      puts "Address: #{address}"
+      if rating > 0
+        puts "Rating: #{rating}"
+      end
+      index = index + 1
+    end
+  elsif user_input.downcase == "n"
+    puts "Goodbye!"
+    break
+  else
+    puts "----------------------------------------------------------"
+    puts "Invalid response. Try again."
+  end
+end
