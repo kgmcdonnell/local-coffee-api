@@ -1,10 +1,12 @@
-@jwt = eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjo3LCJleHAiOjE2ODA2MjAzNDJ9.RoCehf5__FZq3cBJ5Z5E6jd_8SjpGKw6vnFomu-GJXE
+@jwt = eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjo3LCJleHAiOjE2ODEyNDQwODF9.Q4xHc4iSUUthHKVqn0feylftTpNpVH8BKSAk3Y1SgII
 
 ### Coffee Shops Index
 GET http://localhost:3000/coffee_shops.json
+Authorization: Bearer {{jwt}}
 
 ### Coffee Shops Show
-GET http://localhost:3000/coffee_shops/3.json
+GET http://localhost:3000/coffee_shops/ChIJKSBwe8DygoARVHzPdaWXFoU.json
+Authorization: Bearer {{jwt}}
 
 ### Coffee Shops Create
 POST http://localhost:3000/coffee_shops.json
