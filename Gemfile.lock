@@ -95,6 +95,7 @@ GEM
     ffi-compiler (1.0.1)
       ffi (>= 1.0.0)
       rake
+    geocoder (1.8.1)
     globalid (1.1.0)
       activesupport (>= 5.0)
     http (5.1.1)
@@ -235,6 +236,7 @@ DEPENDENCIES
   bootsnap
   capybara
   debug
+  geocoder
   http
   importmap-rails
   jbuilder
