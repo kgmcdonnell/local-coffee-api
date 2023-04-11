@@ -1,4 +1,5 @@
-@jwt = eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjo3LCJleHAiOjE2ODEzMTk1MzF9.MQ9uUkmz_7usMrEkBaTaSQ6jGjf8hvDgVk7xqv4VC6M
+@jwt = eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2ODEzMjkxMzd9.JesJyS_B1-Wb_5F3_c93eQyI-agn6svNb0DBD8DoXjE
+
 ### Coffee Shops Index
 GET http://localhost:3000/coffee_shops.json
 Authorization: Bearer {{jwt}}
@@ -12,8 +13,8 @@ POST http://localhost:3000/users.json
 Content-Type: application/json
 
 {
-  "name":"Callie2",
-  "email":"callie2@test.com",
+  "name":"Callie",
+  "email":"callie@test.com",
   "password":"password",
   "password_confirmation":"password",
   "city":"Palm Bay",
@@ -38,6 +39,6 @@ POST http://localhost:3000/sessions.json
 Content-Type: application/json
 
 {
-  "email": "bristol@test.com",
+  "email": "callie@test.com",
   "password":"password"
 }
