@@ -1,5 +1,4 @@
-@jwt = eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjo3LCJleHAiOjE2ODEyNDQwODF9.Q4xHc4iSUUthHKVqn0feylftTpNpVH8BKSAk3Y1SgII
-
+@jwt = eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjo3LCJleHAiOjE2ODEzMTk1MzF9.MQ9uUkmz_7usMrEkBaTaSQ6jGjf8hvDgVk7xqv4VC6M
 ### Coffee Shops Index
 GET http://localhost:3000/coffee_shops.json
 Authorization: Bearer {{jwt}}
@@ -13,14 +12,23 @@ POST http://localhost:3000/users.json
 Content-Type: application/json
 
 {
-  "name":"Bristol",
-  "email":"bristol@test.com",
+  "name":"Sara",
+  "email":"sara@test.com",
   "password":"password",
   "password_confirmation":"password"
 }
 
+### User Update
+PATCH http://localhost:3000/users/7.json
+Content-Type: application/json
+Authorization: Bearer {{jwt}}
+
+{
+  "picture": "test.jpeg"
+}
+
 ### Delete User
-DELETE http://localhost:3000/users/4.json
+DELETE http://localhost:3000/users/7.json
 Authorization: Bearer {{jwt}}
 
 ### Create a Sessions (User Login)
