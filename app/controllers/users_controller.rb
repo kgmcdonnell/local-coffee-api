@@ -8,9 +8,7 @@ class UsersController < ApplicationController
       email: params[:email],
       password: params[:password],
       password_confirmation: params[:password_confirmation],
-      street: params[:street],
       city: params[:city],
-      zip: params[:zip],
       state: params[:state],
     )
 

@@ -15,7 +15,9 @@ Content-Type: application/json
   "name":"Callie2",
   "email":"callie2@test.com",
   "password":"password",
-  "password_confirmation":"password"
+  "password_confirmation":"password",
+  "city":"Palm Bay",
+  "state":"Florida"
 }
 
 ### User Update
