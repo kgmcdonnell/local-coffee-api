@@ -5,4 +5,6 @@ class User < ApplicationRecord
   # get users latitude and longitude coordinates
   geocoded_by :ip_address, :latitude => :lat, :longitude => :lon
   after_validation :geocode
+
+  has_many :posts
 end
