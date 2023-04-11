@@ -2,7 +2,7 @@ class CoffeeShopsController < ApplicationController
   before_action :authenticate_user
 
   def index
-    response = HTTP.get("https://maps.googleapis.com/maps/api/place/textsearch/json?query=coffee+shop&location=#{:latitude},#{:longitude}&radius=10000&region=us&type=bakery,cafe&key=#{ENV["GOOGLE_PLACES_API_KEY"]}")
+    response = HTTP.get("https://maps.googleapis.com/maps/api/place/textsearch/json?query=coffee+shop&location=#{:latitude},#{:longitude}&radius=10000&region=us&type=cafe&key=#{ENV["GOOGLE_PLACES_API_KEY"]}")
 
     @coffee_shops = response.parse(:json)
     render json: @coffee_shops
