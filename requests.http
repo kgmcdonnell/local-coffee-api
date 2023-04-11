@@ -8,7 +8,6 @@ Authorization: Bearer {{jwt}}
 GET http://localhost:3000/coffee_shops/ChIJS_Xjr6QN3ogRcSjPgfRIeRo.json
 Authorization: Bearer {{jwt}}
 
-
 ### User Sign-Up
 POST http://localhost:3000/users.json
 Content-Type: application/json
