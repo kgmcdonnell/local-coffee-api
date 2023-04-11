@@ -1,11 +1,11 @@
-@jwt = eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2ODEzMjkxMzd9.JesJyS_B1-Wb_5F3_c93eQyI-agn6svNb0DBD8DoXjE
+@jwt = eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjo2LCJleHAiOjE2ODEzMzEyODF9.a3R-rKDthE1kohSk6LlEjTircHAIgCWk_zvlf8z6uZ0
 
 ### Coffee Shops Index
 GET http://localhost:3000/coffee_shops.json
 Authorization: Bearer {{jwt}}
 
 ### Coffee Shops Show
-GET http://localhost:3000/coffee_shops/ChIJS_Xjr6QN3ogRcSjPgfRIeRo.json
+GET http://localhost:3000/coffee_shops/ChIJK4oXfZkN3ogRoObS004n5bs.json
 Authorization: Bearer {{jwt}}
 
 ### User Sign-Up
@@ -13,16 +13,16 @@ POST http://localhost:3000/users.json
 Content-Type: application/json
 
 {
-  "name":"Callie",
-  "email":"callie@test.com",
+  "name":"bristol",
+  "email":"bristol@test.com",
   "password":"password",
   "password_confirmation":"password",
-  "city":"Palm Bay",
-  "state":"Florida"
+  "city":"Austin",
+  "state":"TX"
 }
 
 ### User Update
-PATCH http://localhost:3000/users/7.json
+PATCH http://localhost:3000/users/6.json
 Content-Type: application/json
 Authorization: Bearer {{jwt}}
 
@@ -31,7 +31,7 @@ Authorization: Bearer {{jwt}}
 }
 
 ### Delete User
-DELETE http://localhost:3000/users/7.json
+DELETE http://localhost:3000/users/2.json
 Authorization: Bearer {{jwt}}
 
 ### Create a Sessions (User Login)
@@ -39,6 +39,17 @@ POST http://localhost:3000/sessions.json
 Content-Type: application/json
 
 {
-  "email": "callie@test.com",
+  "email": "bristol@test.com",
   "password":"password"
+}
+
+### Create Posts
+POST http://localhost:3000/posts.json
+Authorization: Bearer {{jwt}}
+Content-Type: application/json
+
+{
+  "image":"test.jpeg",
+  "caption":"I love this coffee shop!",
+  "coffee_shop_id":"test"
 }

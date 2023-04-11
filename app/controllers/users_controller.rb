@@ -10,6 +10,7 @@ class UsersController < ApplicationController
       password_confirmation: params[:password_confirmation],
       city: params[:city],
       state: params[:state],
+      picture: params[:picture],
     )
 
     if @user.save
