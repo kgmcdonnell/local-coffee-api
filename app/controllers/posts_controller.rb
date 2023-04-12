@@ -1,6 +1,7 @@
 class PostsController < ApplicationController
   before_action :authenticate_user
 
+  # users create post action
   def create
     @post = Post.new(
       image: params[:image],
@@ -15,16 +16,19 @@ class PostsController < ApplicationController
     end
   end
 
+  # display all posts for a user
   def index
     @posts = current_user.posts.all
     render :index
   end
 
+  # display a specific post for a user
   def show
     @post = current_user.posts.find_by(id: params[:id])
     render :show
   end
 
+  # allow user to delete a post
   def destroy
     @post = current_user.posts.find_by(id: params[:id])
     @post.destroy

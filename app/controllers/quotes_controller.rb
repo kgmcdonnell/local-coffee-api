@@ -1,6 +1,7 @@
 class QuotesController < ApplicationController
   before_action :authenticate_admin
 
+  # allow admins to create a quote
   def create
     @quote = Quote.new(
       text: params[:text],
@@ -13,6 +14,7 @@ class QuotesController < ApplicationController
     end
   end
 
+  # allow admins to delete a quote
   def destroy
     @quote = Quote.find_by(id: params[:id])
     @quote.destroy
