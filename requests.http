@@ -22,12 +22,12 @@ Content-Type: application/json
 }
 
 ### User Update
-PATCH http://localhost:3000/users/6.json
+PATCH http://localhost:3000/users/5.json
 Content-Type: application/json
 Authorization: Bearer {{jwt}}
 
 {
-  "picture": "test.jpeg"
+  "picture": "selfie.jpeg"
 }
 
 ### Delete User
