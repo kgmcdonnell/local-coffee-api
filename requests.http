@@ -1,4 +1,4 @@
-@jwt = eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjo2LCJleHAiOjE2ODEzNDM5MjV9.HGMxh76reEbt4QMSo8ke2CJQOGCobcLbmRlANWMrDOI
+@jwt = eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjo1LCJleHAiOjE2ODEzNDg5MDJ9.pBkoqCaWH0ZMX_qbEFyuUPvDISbRdG3Jk6Bsamy68CY
 
 ### Coffee Shops Index
 GET http://localhost:3000/coffee_shops.json
@@ -13,12 +13,12 @@ POST http://localhost:3000/users.json
 Content-Type: application/json
 
 {
-  "name":"bristol",
-  "email":"bristol@test.com",
+  "name":"kathleen",
+  "email":"kathleen@test.com",
   "password":"password",
   "password_confirmation":"password",
-  "city":"Austin",
-  "state":"TX"
+  "city":"Seattle",
+  "state":"Washington"
 }
 
 ### User Update
@@ -39,7 +39,7 @@ POST http://localhost:3000/sessions.json
 Content-Type: application/json
 
 {
-  "email": "bristol@test.com",
+  "email": "kathleen@test.com",
   "password":"password"
 }
 
@@ -65,3 +65,13 @@ Authorization: Bearer {{jwt}}
 ### Delete User Post
 DELETE http://localhost:3000/posts/2.json
 Authorization: Bearer {{jwt}}
+
+### Create Quote
+POST http://localhost:3000/quotes.json 
+Authorization: Bearer {{jwt}}
+Content-Type: application/json
+
+{
+  "text":"Today’s good mood is sponsored by coffee.",
+  "author":"Anonymous"
+}
