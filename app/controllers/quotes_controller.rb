@@ -12,4 +12,10 @@ class QuotesController < ApplicationController
       render json: { message: @quote.errors.full_messages }, status: :bad_request
     end
   end
+
+  def destroy
+    @quote = Quote.find_by(id: params[:id])
+    @quote.destroy
+    render json: { message: "Successfully deleted quote!" }, status: 200
+  end
 end

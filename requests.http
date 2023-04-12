@@ -75,3 +75,7 @@ Content-Type: application/json
   "text":"Today’s good mood is sponsored by coffee.",
   "author":"Anonymous"
 }
+
+### Delete Quote
+DELETE http://localhost:3000/quotes/9.json
+Authorization: Bearer {{jwt}}
