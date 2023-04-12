@@ -59,5 +59,9 @@ GET http://localhost:3000/posts.json
 Authorization: Bearer {{jwt}}
 
 ### Show Specific User Post
-GET http://localhost:3000/posts/2.json
+GET http://localhost:3000/posts/1.json
+Authorization: Bearer {{jwt}}
+
+### Delete User Post
+DELETE http://localhost:3000/posts/2.json
 Authorization: Bearer {{jwt}}

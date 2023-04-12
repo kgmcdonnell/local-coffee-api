@@ -24,4 +24,10 @@ class PostsController < ApplicationController
     @post = current_user.posts.find_by(id: params[:id])
     render :show
   end
+
+  def destroy
+    @post = current_user.posts.find_by(id: params[:id])
+    @post.destroy
+    render json: { message: "Successfully deleted!" }
+  end
 end
