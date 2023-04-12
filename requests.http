@@ -1,11 +1,11 @@
-@jwt = eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjo2LCJleHAiOjE2ODEzMzEyODF9.a3R-rKDthE1kohSk6LlEjTircHAIgCWk_zvlf8z6uZ0
+@jwt = eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjo2LCJleHAiOjE2ODEzNDM5MjV9.HGMxh76reEbt4QMSo8ke2CJQOGCobcLbmRlANWMrDOI
 
 ### Coffee Shops Index
 GET http://localhost:3000/coffee_shops.json
 Authorization: Bearer {{jwt}}
 
 ### Coffee Shops Show
-GET http://localhost:3000/coffee_shops/ChIJK4oXfZkN3ogRoObS004n5bs.json
+GET http://localhost:3000/coffee_shops/ChIJt2vVjrC1RIYRJyZmyVWhU8A.json
 Authorization: Bearer {{jwt}}
 
 ### User Sign-Up
@@ -50,6 +50,14 @@ Content-Type: application/json
 
 {
   "image":"test.jpeg",
-  "caption":"I love this coffee shop!",
+  "caption":"Best lattes!!",
   "coffee_shop_id":"test"
 }
+
+### Display all User Posts
+GET http://localhost:3000/posts.json
+Authorization: Bearer {{jwt}}
+
+### Show Specific User Post
+GET http://localhost:3000/posts/2.json
+Authorization: Bearer {{jwt}}

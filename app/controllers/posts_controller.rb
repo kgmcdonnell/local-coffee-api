@@ -14,4 +14,14 @@ class PostsController < ApplicationController
       render json: { errors: @post.errors.full_messages }, status: :bad_request
     end
   end
+
+  def index
+    @posts = current_user.posts.all
+    render :index
+  end
+
+  def show
+    @post = current_user.posts.find_by(id: params[:id])
+    render :show
+  end
 end
