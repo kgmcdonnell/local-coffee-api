@@ -20,12 +20,16 @@ class UsersController < ApplicationController
     end
   end
 
-  # Update User Profile Picture
+  # Update User
   def update
     @user = User.find_by(id: params[:id])
     if @user == current_user
       @user.update(
         picture: params[:picture] || @user.picture,
+        city: params[:city] || @user.city,
+        state: params[:state] || @user.state,
+        city: params[:email] || @user.email,
+        name: params[:name] || @user.name,
       )
       render json: { message: "User updated!" }, status: 200
     else

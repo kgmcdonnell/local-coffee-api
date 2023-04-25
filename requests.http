@@ -1,4 +1,4 @@
-@jwt = eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjo1LCJleHAiOjE2ODEzNDg5MDJ9.pBkoqCaWH0ZMX_qbEFyuUPvDISbRdG3Jk6Bsamy68CY
+@jwt = eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2ODI1MTQ4NjF9.oiXkWeC3fDyX5Z6uozRV6MmBN0kOI64rzb4nEniq0Pk
 
 ### Coffee Shops Index
 GET http://localhost:3000/coffee_shops.json
@@ -22,12 +22,13 @@ Content-Type: application/json
 }
 
 ### User Update
-PATCH http://localhost:3000/users/5.json
+PATCH http://localhost:3000/users/1.json
 Content-Type: application/json
 Authorization: Bearer {{jwt}}
 
 {
-  "picture": "selfie.jpeg"
+  "city": "Austin",
+  "state": "Texas"
 }
 
 ### Delete User
