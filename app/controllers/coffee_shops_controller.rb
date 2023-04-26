@@ -7,9 +7,10 @@ class CoffeeShopsController < ApplicationController
     lon = current_user.longitude
     response = HTTP.get("https://maps.googleapis.com/maps/api/place/textsearch/json?query=coffee+shop&location=#{lat},#{lon}&radius=10000&region=us&type=cafe&key=#{ENV["GOOGLE_PLACES_API_KEY"]}")
     data = response.parse(:json)
-    @coffee_shops = data["results"]
-
-    # @coffee_shops = response.parse(:json)
+    data = data["results"]
+    chains = ["Starbucks", "Dunkin'"]
+    data = data.delete_if { |x| chains.include? x["name"] }
+    @coffee_shops = data
     render json: @coffee_shops
   end
 
