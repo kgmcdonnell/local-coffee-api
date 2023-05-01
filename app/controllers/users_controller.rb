@@ -28,7 +28,7 @@ class UsersController < ApplicationController
         picture: params[:picture] || @user.picture,
         city: params[:city] || @user.city,
         state: params[:state] || @user.state,
-        city: params[:email] || @user.email,
+        email: params[:email] || @user.email,
         name: params[:name] || @user.name,
       )
       render json: { message: "User updated!" }, status: 200
