@@ -20,6 +20,16 @@ class UsersController < ApplicationController
     end
   end
 
+  # User Show
+  def show
+    @user = User.find_by(id: params[:id])
+    if @user == current_user
+      render json: @user
+    else
+      render json: { errors: "Unauthorized" }, status: 401
+    end
+  end
+
   # Update User
   def update
     @user = User.find_by(id: params[:id])

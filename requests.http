@@ -1,4 +1,4 @@
-@jwt = eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoyLCJleHAiOjE2ODI2MTA5OTJ9.RV66p_Ey7mGR4T4AK7tv8eFc023-av9M7dh0dmqruOI
+@jwt = eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2ODM1NzgyMDN9.7TGMvDzc1EEw9SYo0kXZ0e16Zkwh34nDIX0iFGuPQBY
 
 ### Coffee Shops Index
 GET http://localhost:3000/coffee_shops.json
@@ -21,6 +21,10 @@ Content-Type: application/json
   "state":"Washington"
 }
 
+### User Show
+GET http://localhost:3000/users/5.json
+Authorization: Bearer {{jwt}}
+
 ### User Update
 PATCH http://localhost:3000/users/1.json
 Content-Type: application/json
@@ -40,7 +44,7 @@ POST http://localhost:3000/sessions.json
 Content-Type: application/json
 
 {
-  "email": "kathleen@test.com",
+  "email": "atlas@test.com",
   "password":"password"
 }
 
