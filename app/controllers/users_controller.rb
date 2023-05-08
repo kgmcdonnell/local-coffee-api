@@ -34,6 +34,7 @@ class UsersController < ApplicationController
   def update
     @user = User.find_by(id: params[:id])
     if @user == current_user
+      pp params
       @user.update(
         picture: params[:picture] || @user.picture,
         city: params[:city] || @user.city,

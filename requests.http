@@ -31,8 +31,7 @@ Content-Type: application/json
 Authorization: Bearer {{jwt}}
 
 {
-  "city": "Austin",
-  "state": "Texas"
+  "name": "Atlas McDonnell"
 }
 
 ### Delete User
