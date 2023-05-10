@@ -42,7 +42,7 @@ class UsersController < ApplicationController
         email: params[:email] || @user.email,
         name: params[:name] || @user.name,
       )
-      render json: { message: "User updated!" }, status: 200
+      render json: @user, status: 200
     else
       render json: { errors: "Unauthorized" }, status: 401
     end
