@@ -1,4 +1,4 @@
-@jwt = eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2ODM1NzgyMDN9.7TGMvDzc1EEw9SYo0kXZ0e16Zkwh34nDIX0iFGuPQBY
+@jwt = eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2ODM4NTIwNzF9.qOzEWZXaw9t8uXT91Ry-bCb-eTSnq4AiXP5AH4lNz1Y
 
 ### Coffee Shops Index
 GET http://localhost:3000/coffee_shops.json
@@ -67,7 +67,7 @@ GET http://localhost:3000/posts/1.json
 Authorization: Bearer {{jwt}}
 
 ### Delete User Post
-DELETE http://localhost:3000/posts/2.json
+DELETE http://localhost:3000/posts/1.json
 Authorization: Bearer {{jwt}}
 
 ### Create Quote
