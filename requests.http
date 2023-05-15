@@ -1,4 +1,4 @@
-@jwt = eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2ODM4NTIwNzF9.qOzEWZXaw9t8uXT91Ry-bCb-eTSnq4AiXP5AH4lNz1Y
+@jwt = eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2ODQxNjI5NjZ9.6mKbKm6yQIdzUwasuLFVrdMek0vLYwttW1SCR-HY-1U
 
 ### Coffee Shops Index
 GET http://localhost:3000/coffee_shops.json
@@ -31,7 +31,8 @@ Content-Type: application/json
 Authorization: Bearer {{jwt}}
 
 {
-  "name": "Atlas McDonnell"
+  "city" : "Austin",
+  "state": "Texass"
 }
 
 ### Delete User

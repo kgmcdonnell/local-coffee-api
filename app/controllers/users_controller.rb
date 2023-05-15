@@ -36,7 +36,7 @@ class UsersController < ApplicationController
     if @user == current_user
       pp params
       @user.update(
-        picture: params[:picture] || @user.picture,
+        # picture: params[:picture] || @user.picture,
         city: params[:city] || @user.city,
         state: params[:state] || @user.state,
         email: params[:email] || @user.email,
