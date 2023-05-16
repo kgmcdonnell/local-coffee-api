@@ -4,11 +4,10 @@ ROAST'd allows users to explore new coffee shops within a six-mile radius of the
 Check out ROAST'D: https://local-coffee-frontend.onrender.com
 
 ## Getting Started
-### `git clone https://github.com/kgmcdonnell/local-coffee-api
+```
+git clone https://github.com/kgmcdonnell/local-coffee-api
 bundle install
 rails db:create db:migrate db:seed
-rails server`
-
-## Contributing
-Kathleen McDonnell
+rails server
 ```
+
