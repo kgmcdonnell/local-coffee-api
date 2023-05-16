@@ -1,24 +1,14 @@
-# README
+# ROAST'D
+ROAST'd allows users to explore new coffee shops within a six-mile radius of the user's geolocation. This repository contains the backend source code for the ROAST'D web application. 
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Check out ROAST'D: https://local-coffee-frontend.onrender.com
 
-Things you may want to cover:
+## Getting Started
+### `git clone https://github.com/kgmcdonnell/local-coffee-api`
+### `bundle install`
+### `rails db:create db:migrate db:seed`
+### `rails server`
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+## Contributing
+Kathleen McDonnell
+```
