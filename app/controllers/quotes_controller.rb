@@ -1,5 +1,10 @@
 class QuotesController < ApplicationController
-  before_action :authenticate_admin
+  before_action :authenticate_admin, except: [:index]
+
+  def index
+    @quotes = Quote.all
+    render json: @quotes.as_json
+  end
 
   # allow admins to create a quote
   def create

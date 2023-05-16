@@ -1,5 +1,8 @@
 @jwt = eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2ODQxNjI5NjZ9.6mKbKm6yQIdzUwasuLFVrdMek0vLYwttW1SCR-HY-1U
 
+### Quotes Index
+GET http://localhost:3000/quotes.json
+
 ### Coffee Shops Index
 GET http://localhost:3000/coffee_shops.json
 Authorization: Bearer {{jwt}}
@@ -47,29 +50,6 @@ Content-Type: application/json
   "email": "atlas@test.com",
   "password":"password"
 }
-
-### Create Posts
-POST http://localhost:3000/posts.json
-Authorization: Bearer {{jwt}}
-Content-Type: application/json
-
-{
-  "image":"test.jpeg",
-  "caption":"Best lattes!!",
-  "coffee_shop_id":"test"
-}
-
-### Display all User Posts
-GET http://localhost:3000/posts.json
-Authorization: Bearer {{jwt}}
-
-### Show Specific User Post
-GET http://localhost:3000/posts/1.json
-Authorization: Bearer {{jwt}}
-
-### Delete User Post
-DELETE http://localhost:3000/posts/1.json
-Authorization: Bearer {{jwt}}
 
 ### Create Quote
 POST http://localhost:3000/quotes.json 
