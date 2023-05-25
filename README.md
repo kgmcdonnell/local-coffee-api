@@ -14,3 +14,8 @@ rails db:create db:migrate db:seed
 rails server
 ```
 
+## API Documentation
+Google Places API: https://developers.google.com/maps/documentation/places/web-service
+
+
+
