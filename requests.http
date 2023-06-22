@@ -1,4 +1,4 @@
-@jwt = eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2ODQxNjI5NjZ9.6mKbKm6yQIdzUwasuLFVrdMek0vLYwttW1SCR-HY-1U
+@jwt = eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjozLCJleHAiOjE2ODQ2MzEzNjd9.l2en6bLdNVRoNVQf2AHEGupUuWLrotR8-LgH9qrZXf4
 
 ### Quotes Index
 GET http://localhost:3000/quotes.json
@@ -39,7 +39,7 @@ Authorization: Bearer {{jwt}}
 }
 
 ### Delete User
-DELETE http://localhost:3000/users/2.json
+DELETE http://localhost:3000/users/3.json
 Authorization: Bearer {{jwt}}
 
 ### Create a Sessions (User Login)
@@ -47,8 +47,8 @@ POST http://localhost:3000/sessions.json
 Content-Type: application/json
 
 {
-  "email": "atlas@test.com",
-  "password":"password"
+  "email": "saramegmcd25@aol.com",
+  "password":"Hilton9!"
 }
 
 ### Create Quote

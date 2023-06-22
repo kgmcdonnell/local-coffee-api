@@ -1,6 +1,6 @@
 Rails.application.config.middleware.insert_before 0, Rack::Cors do
   allow do
-    origins /localhost:\d+/, "local-coffee-frontend.onrender.com"
+    origins /localhost:\d+/, "https://roastd-coffee.onrender.com"
 
     resource "*",
       headers: :any,
