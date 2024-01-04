@@ -1,7 +1,7 @@
 class CoffeeShopsController < ApplicationController
   before_action :authenticate_user
 
-  # show all coffee shops based on user coordinates
+  # show all coffee shops based on user coordinates test
   def index
     lat = current_user.latitude
     lon = current_user.longitude
